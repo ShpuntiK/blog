@@ -22,7 +22,16 @@ config = {
 
     production: {
         url: 'http://aivantsov.com',
-        mail: {},
+        mail: {
+            transport: 'SMTP',
+            options: {
+                service: 'Gmail',
+                auth: {
+                    user: process.env.EMAIL_USERNAME,
+                    pass: process.env.EMAIL_PASSWORD
+                }
+            }
+        },
         database: {
             client: 'postgres',
             connection: process.env.DATABASE_URL,
