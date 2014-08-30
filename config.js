@@ -21,7 +21,7 @@ config = {
     },
 
     production: {
-        url: 'http://aivantsov.heroku.com',
+        url: 'http://aivantsov.com',
         mail: {},
         database: {
             client: 'postgres',
