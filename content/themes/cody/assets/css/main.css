@@ -751,6 +751,10 @@ iframe, .fluid-width-video-wrapper {
     content: " · ";
 }
 
+.post-item-footer {
+    overflow: hidden;
+}
+
 .user-meta {
     position: relative;
     padding: 0.3rem 40px 0 100px;
@@ -1094,7 +1098,7 @@ iframe, .fluid-width-video-wrapper {
     .post {
         font-size: 0.9em;
         line-height: 1.6em;
-        padding-bottom: 4rem;
+        padding-bottom: 2rem;
     }
 
     .post-template .post {
@@ -1132,7 +1136,7 @@ iframe, .fluid-width-video-wrapper {
         margin-right: 16px;
         font-size: 0.8em;
         line-height: 1.6em;
-        padding-bottom: 4rem;
+        padding-bottom: 2rem;
     }
 
     .site-head {
