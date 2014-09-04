@@ -811,7 +811,7 @@ iframe, .fluid-width-video-wrapper {
     font-size: 1.8rem;
 }
 
-.post-content img {
+.post-content img, .post-excerpt img {
     display: block;
     max-width: 100%;
     margin: 0 auto;

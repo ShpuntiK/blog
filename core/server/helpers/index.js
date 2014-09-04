@@ -304,9 +304,9 @@ coreHelpers.content = function (options) {
     }
     else if (truncateOptions.hasOwnProperty('preview')) {
         var split = this.html.split('<!--preview-->', 2),
-            output = split[0];
+            preview = split[0];
 
-        return new hbs.handlebars.SafeString(output);
+        return new hbs.handlebars.SafeString(preview);
     }
 
     return new hbs.handlebars.SafeString(this.html);
