@@ -9,10 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui"/>
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}"/>
-
-    <script>
-        {{> config}}
-    </script>
 </head>
 <body class="{{body_class}}">
 
@@ -45,6 +41,10 @@
     </footer>
 </main>
 
+
+<script>
+    {{> config}}
+</script>
 <script>
     (function () {
         var s = document.createElement('script');
@@ -54,5 +54,6 @@
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
 </script>
+<script src="{{asset "js/prism.js"}}"></script>
 </body>
 </html>
