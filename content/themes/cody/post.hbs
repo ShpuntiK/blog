@@ -28,6 +28,19 @@
             {{content}}
         </section>
 
+        <footer class="post-footer">
+            <section class="author">
+                <img src="{{author.image}}">
+                <h4>{{author.name}}</h4>
+                <p>{{author.bio}}</p>
+            </section>
+            <section class="share">
+                <a class="icon-twitter" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+            </section>
+        </footer>
+
         <section class="comment">
             <div id="disqus_thread"></div>
             <script>
