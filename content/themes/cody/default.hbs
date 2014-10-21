@@ -5,8 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title>{{meta_title}}</title>
+
     <meta name="description" content="{{meta_description}}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui"/>
+
+    {{> custom/meta}}
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{meta_title}}">
+    <meta name="twitter:description" content="{{meta_description}}">
+
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}"/>
 
@@ -25,8 +33,7 @@
         </div>
 
         <div class="blog-links">
-            <a class="icon-github" href="https://github.com/shpuntik" target="_blank"></a>
-            <a class="icon-linkedin" href="http://lnkd.in/brfxkcH" target="_blank"></a>
+            {{> custom/links}}
         </div>
     </header>
 
