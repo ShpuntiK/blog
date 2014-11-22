@@ -1,5 +1,21 @@
 var path = require('path'),
+    fs = require('fs');
+
+var env = fs.readFileSync('/etc/environment', 'utf-8').split('\n'),
+    envVars = {},
     config;
+
+env.forEach(function(envVar){
+    var key, value;
+
+    envVar = envVar.split('=');
+    key = envVar[0];
+    value = envVar[1];
+
+    if(value){
+        envVars[key] = value;
+    }
+});
 
 config = {
     development: {
@@ -27,8 +43,8 @@ config = {
             options: {
                 service: 'Gmail',
                 auth: {
-                    user: process.env.EMAIL_USERNAME,
-                    pass: process.env.EMAIL_PASSWORD
+                    user: envVars.EMAIL_USERNAME,
+                    pass: envVars.EMAIL_PASSWORD
                 }
             }
         },
@@ -37,9 +53,9 @@ config = {
             connection: {
                 host: '127.0.0.1',
                 port: '5432',
-                database: process.env.DB_NAME,
-                user: process.env.DB_USERNAME,
-                password: process.env.DB_PASSWORD
+                database: envVars.DB_NAME,
+                user: envVars.DB_USERNAME,
+                password: envVars.DB_PASSWORD
             },
             debug: false
         },
