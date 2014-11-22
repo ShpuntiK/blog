@@ -34,12 +34,18 @@ config = {
         },
         database: {
             client: 'postgres',
-            connection: process.env.DATABASE_URL,
+            connection: {
+                host: '127.0.0.1',
+                port: '5432',
+                database: process.env.DB_NAME,
+                user: process.env.DB_USERNAME,
+                password: process.env.DB_PASSWORD
+            },
             debug: false
         },
         server: {
             host: '0.0.0.0',
-            port: process.env.PORT
+            port: '2368'
         }
     }
 };
